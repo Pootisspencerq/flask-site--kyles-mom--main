@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>{{article[1]}}</title>
+{% endblock title %}
+{% block content %}
+<main class="container">
+  <h1 class="mt-5">{{ article[1] }}</h1>
+  <img src="{{ url_for('static', filename='pic/' + article[3]) }}" class="img-fluid card-img-top" alt="...">
+{% for p in article[2].split("\n") %}
+  
+{% endfor %}
+
+  <p>{{ p }}</p>
+</main>
+
+{% endblock content %}
